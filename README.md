@@ -22,7 +22,7 @@ pip install transformermpc
 Or install from source:
 
 ```bash
-git clone https://github.com/vrushabh/transformermpc.git
+git clone https://github.com/Vrushabh27/transformermpc.git
 cd transformermpc
 pip install -e .
 ```
