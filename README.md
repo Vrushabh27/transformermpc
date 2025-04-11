@@ -22,7 +22,7 @@ pip install transformermpc
 Or install from source:
 
 ```bash
-git clone https://github.com/Vrushabh27/transformermpc.git
+git clone https://github.com/vrushabh/transformermpc.git
 cd transformermpc
 pip install -e .
 ```
@@ -55,7 +55,7 @@ The package also includes these utility scripts:
    python run_demo.py
    ```
 
-2. **test_benchmark.py**: For comprehensive performance evaluation with more metrics and advanced visualizations:
+2. **test_benchmark.py**: For comprehensive performance evaluation with more metrics and visualizations:
 
    ```bash
    python test_benchmark.py
@@ -153,6 +153,14 @@ print(f"Solve time: {solve_time} seconds")
 
 ```python
 from transformermpc import TransformerMPC, QPProblem
+import numpy as np
+
+# Define your QP problem parameters
+Q = np.array([[4.0, 1.0], [1.0, 2.0]])
+c = np.array([1.0, 1.0])
+A = np.array([[-1.0, 0.0], [0.0, -1.0], [-1.0, -1.0], [1.0, 1.0]])
+b = np.array([0.0, 0.0, -1.0, 2.0])
+initial_state = np.array([0.5, 0.5])  # Optional: initial state for MPC problems
 
 # Create a QP problem instance
 qp_problem = QPProblem(
@@ -160,7 +168,7 @@ qp_problem = QPProblem(
     c=c,
     A=A,
     b=b,
-    initial_state=x0
+    initial_state=initial_state  # Optional
 )
 
 # Initialize with custom settings
@@ -171,10 +179,13 @@ solver = TransformerMPC(
 )
 
 # Solve the problem
-solution = solver.solve(qp_problem)
+solution, solve_time = solver.solve(qp_problem=qp_problem)
+print(f"Solution: {solution}")
+print(f"Solve time: {solve_time} seconds")
 
 # Compare with baseline
-baseline_solution = solver.solve_baseline(qp_problem)
+baseline_solution, baseline_time = solver.solve_baseline(qp_problem=qp_problem)
+print(f"Baseline time: {baseline_time} seconds")
 ```
 
 
