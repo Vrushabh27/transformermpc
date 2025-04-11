@@ -106,7 +106,7 @@ python simple_demo.py --skip_training
 python simple_demo.py --output_dir custom_results
 ```
 
-### All Available Options
+### Available Options
 
 | Parameter | Description | Default |
 |-----------|-------------|---------|
