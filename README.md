@@ -187,7 +187,15 @@ print(f"Solve time: {solve_time} seconds")
 baseline_solution, baseline_time = solver.solve_baseline(qp_problem=qp_problem)
 print(f"Baseline time: {baseline_time} seconds")
 ```
-
+## If you find our work useful, please cite us
+```
+@article{zinage2024transformermpc,
+  title={TransformerMPC: Accelerating Model Predictive Control via Transformers},
+  author={Zinage, Vrushabh and Khalil, Ahmed and Bakolas, Efstathios},
+  journal={arXiv preprint arXiv:2409.09266},
+  year={2024}
+}
+```
 
 ## License
 
