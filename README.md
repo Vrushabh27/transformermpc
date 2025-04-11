@@ -149,7 +149,7 @@ print(f"Solution: {solution}")
 print(f"Solve time: {solve_time} seconds")
 ```
 
-### Advanced Usage
+### General Usage
 
 ```python
 from transformermpc import TransformerMPC, QPProblem
