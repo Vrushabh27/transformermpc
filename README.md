@@ -4,7 +4,7 @@ Accelerating Model Predictive Control via Transformers
 
 ## Overview
 
-TransformerMPC improves the computational efficiency of Model Predictive Control (MPC) problems using transformer-based neural networks. It employs two specialized transformer models:
+TransformerMPC improves the computational efficiency of Model Predictive Control (MPC) problems using transformer-based neural networks. It employs the following two transformer models:
 
 1. **Constraint Predictor**: Identifies inactive constraints in MPC formulations
 2. **Warm Start Predictor**: Generates better initial points for MPC solvers
