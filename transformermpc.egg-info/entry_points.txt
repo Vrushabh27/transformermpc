@@ -1,0 +1,2 @@
+[console_scripts]
+transformermpc-demo = transformermpc.demo:main
