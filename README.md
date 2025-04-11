@@ -4,10 +4,10 @@ Accelerating Model Predictive Control via Transformers
 
 ## Overview
 
-TransformerMPC is a Python package that enhances the efficiency of solving Quadratic Programming (QP) problems in Model Predictive Control (MPC) using transformer-based neural networks. It employs two specialized transformer models:
+TransformerMPC improves the computational efficiency of Model Predictive Control (MPC) problems using transformer-based neural networks. It employs two specialized transformer models:
 
-1. **Constraint Predictor**: Identifies inactive constraints in QP formulations
-2. **Warm Start Predictor**: Generates better initial points for QP solvers
+1. **Constraint Predictor**: Identifies inactive constraints in MPC formulations
+2. **Warm Start Predictor**: Generates better initial points for MPC solvers
 
 By combining these models, TransformerMPC significantly reduces computation time while maintaining solution quality.
 
