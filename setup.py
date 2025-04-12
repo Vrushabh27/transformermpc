@@ -8,7 +8,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setup(
     name="transformermpc",
-    version="0.1.3",
+    version="0.1.4",
     author="Vrushabh Zinage, Ahmed Khalil, Efstathios Bakolas",
     author_email="vrushabh.zinage@gmail.com",  
     description="Accelerating Model Predictive Control via Transformers",
