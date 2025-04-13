@@ -96,14 +96,6 @@ python scripts/simple_demo.py
 
 This script demonstrates the complete pipeline: generating QP problems, training models, and evaluating performance. After completion, it saves performance comparison plots in the `demo_results/results` directory.
 
-### Verify Package Structure
-
-To check that the package is installed correctly:
-
-```bash
-python scripts/verify_structure.py
-```
-
 ### Customizing Demo Parameters
 
 You can customize the boxplot demo by modifying parameters:
