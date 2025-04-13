@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "transformermpc"
+version = "0.1.6"
+description = "Accelerating Model Predictive Control via Neural Networks"
+readme = "README.md"
+requires-python = ">=3.7"
+license = "MIT"
+authors = [
+    {name = "Vrushabh Zinage", email = "vrushabh.zinage@e.com"},
+    {name = "Ahmed Khalil"},
+    {name = "Efstathios Bakolas"}
+]
+maintainers = [
+    {name = "Vrushabh Zinage", email = "vrushabh.zinage@e.com"}
+]
+keywords = ["machine learning", "model predictive control", "quadratic programming"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy>=1.20.0",
+    "scipy>=1.7.0",
+    "torch>=1.9.0",
+    "osqp>=0.6.2",
+    "matplotlib>=3.4.0",
+    "pandas>=1.3.0",
+    "tqdm>=4.62.0",
+    "scikit-learn>=0.24.0",
+    "tensorboard>=2.7.0",
+    "quadprog>=0.1.11",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/vrushabh/transformermpc"
+"Bug Tracker" = "https://github.com/vrushabh/transformermpc/issues"
+
+[project.scripts]
+transformermpc-demo = "transformermpc.demo:main"
+
+[tool.setuptools]
+packages = [
+    "transformermpc",
+    "transformermpc.data",
+    "transformermpc.models",
+    "transformermpc.utils",
+    "transformermpc.training",
+    "transformermpc.demo",
+]
+
+[tool.setuptools.package-data]
+transformermpc = ["data/*.pkl", "data/*.npy", "models/*.pth", "models/*.pt", "demo/*.png", "demo/*.jpg"]
+
+[tool.black]
+line-length = 88
+target-version = ["py37", "py38", "py39", "py310"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.pytest]
+testpaths = ["tests"]
+python_files = "test_*.py" 

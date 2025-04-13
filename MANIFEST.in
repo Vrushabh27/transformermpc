@@ -1,0 +1,7 @@
+include LICENSE
+include README.md
+include requirements.txt
+recursive-include transformermpc *.py
+recursive-include transformermpc/data *.pkl *.npy
+recursive-include transformermpc/models *.pth *.pt
+recursive-include transformermpc/demo *.png *.jpg 
